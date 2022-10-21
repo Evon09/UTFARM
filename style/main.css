@@ -179,7 +179,7 @@ section.home{
 /* Section 3 gif*/
 #gif{
 
-    background-image: url('/img/gifPlants.gif');
+    background-image: url('../img/gifPlants.gif');
     background-size: cover;
     background-repeat: repeat;
     background-position: center;
