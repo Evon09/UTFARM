@@ -2,8 +2,8 @@
 
 :root{
 
-    --green:rgb(33, 89, 59);
-    --light-green:rgba(25, 202, 119, 0.274);
+    --light-pink:#e83c8a;
+    --dark-pink:#a64f75;
     --white:rgb(255, 255, 255);
     --black:rgb(0, 0, 0); 
 
@@ -16,6 +16,7 @@
     border: 0;
     font-family: 'Roboto', sans-serif;
     font-family: 'Rubik', sans-serif;
+    scroll-behavior: smooth;
 }
 
 .desktop{
@@ -36,29 +37,31 @@
 }
 
 header{
-    max-width: 100vw;
-    min-height: 10vh;
-    background-color: var(--light-green);
-    overflow: hidden;
-    
-}
-
-header, ul{
-
     width: 100%;
+    height: 10vh;
+    background-color: #ea99a2;
+    color: var(--white);
+
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    list-style: none;
-    
-
+    justify-content: space-between;
+    padding: 1vw  ;
 }
+
+header ul{
+
+    width:45% ;
+    list-style: none;
+    justify-content: space-evenly;
+    
+}
+
 
 header .logo{
     display: block;
-    width: 20vw;
-    
+    width: 4vw;
+    filter: drop-shadow( 0px 0px 9px 9px var(--black));
 }
 
 
@@ -67,46 +70,47 @@ header ul li{
     cursor: pointer;
 }
 
-header ul li.headerExtende span{
-   display: none;
-   position: absolute;
-   transition: ease-in-out 0.3s;
-   
-  
-}
-header ul li.headerExtende{
+header ul li.dropDown{
+    /* overflow: hidden; */
     position: relative;
-    display: inline-block;
-    transition: ease-in-out 0.3s;
+    transition: ease-in 0.5s;
+}
+header ul li.dropDown span{
+    display: none;
+    overflow: hidden;
+    background-color: var(--light-pink);
     text-align: center;
-}
-
-
-header ul li.headerExtende:hover span{
-    display: block;
-    right: 0;
-    padding: 5px;
-    z-index: 1;
+    max-height: 0;
+    transition: ease-in 0.5s;
+    z-index: 2;
     color: var(--white);
-    background-color: var(--green);
-    transition: ease-in 1s;
+    padding: 5px;
 }
 
-header ul li.headerExtende:hover{
-    background-color: var(--light-green);
-    transition: ease-in-out 0.3s;
+header ul li.dropDown:hover span{
+    display: inline-block;
+    position: absolute;
+    max-height: 100vh;
+    animation: slideDown 0.1s ease-in-out;
 }
 
-
-
+@keyframes slideDown{
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100%;
+    }
+}
+    
+header a{
+    text-decoration: none;
+    color: var(--white);
+}
 
 section:not(.home){
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: justify;
+    height: 50vh;
+    
 }
 
 p{
@@ -117,11 +121,11 @@ p{
 
 /* Carrosel Home */
 section.home{
-    height: 50vh;
+    height: calc(70vh - 88px);
 }
 
 .carousel-inner .carousel-item {
-    height: 50vh;
+    height: calc(70vh - 88px);
 }
   
 .carousel-item img {
@@ -133,9 +137,59 @@ section.home{
     object-position: center;
 }
 
+.container{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+}
+
+
+/*Section 1 contato*/
+
+#contato{
+    background-color:var(--white);
+    color: var(--light-pink);
+    padding: vw;
+}
+
+#contato h1{
+    font-size: calc(2em + 1vmin);
+}
+
+#contato button{
+    background-color: var(--dark-pink);
+    color: var(--white);
+    border: 1px solid var(--dark-pink);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: ease-in 0.2s;
+}
+
+#contato button:hover{
+    background-color: var(--white);
+    color: var(--dark-pink);
+    border: 1px solid var(--dark-pink);
+}
+
+/* Section 3 gif*/
+#gif{
+
+    background-image: url('/img/gifPlants.gif');
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    
+}
+
+
 /* Section 2 About */
 
-
+/*
 
 .container{
     width: 60%;
@@ -147,10 +201,10 @@ section#about .container p{
 }
 
 
-
+*/
 
 /* section 3 visao e missao */
-
+/*
 #vew{
     background-color: var(--green);
     color: var(--white);
@@ -192,10 +246,30 @@ section#vew .container .text p{
         background-repeat: no-repeat;
     }
 }
+*/
+/* footer */
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    background-color: var(--dark-pink);
+    color: white;
+
+}
+
+footer a{
+    text-decoration: dashed; 
+    color: var(--white);
+    cursor: pointer;
+}
+
 
 
 /* section 5 kits*/
-
+/*
 section#kits{
     
     position: relative;
@@ -287,22 +361,6 @@ section#kits{
     object-position: center;
 }
 
-
+ */
 
 /*Footer*/
-footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10vh;
-    width: 100%;
-    background-color: var(--green);
-    color: white;
-
-}
-
-footer a{
-    text-decoration: dashed; 
-    color: var(--white);
-    cursor: pointer;
-}
