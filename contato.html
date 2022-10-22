@@ -2,48 +2,84 @@
 <html>
 <head>
 	<title>Contato </title>
-	<link rel="stylesheet" type="text/css" href="./style/contato.css">
-	<link rel="stylesheet" href="./style/header.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="./style/contato.css">
+	<link rel="stylesheet" href="./style/header.css">
+	<link rel="stylesheet" href="./style/footer.css">
+
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
 </head>
 <body>
-	<header>
-        <ul class="desktop leaftHeader">
-          <li class="dropDown">Sítio Urbano 5.0 <br> 
-             <span> Produção sem perdas e funcionários</span>
-          </li>
-          <li class="dropDown">Plataformas de produção <br> 
-            <span> Soluções para produção em ambientes cobertos</span>
-          </li>
-          <li class="dropDown">Kits de inteligência <br> 
-            <span>Soluções em automação</span>
-          </li>
-        </ul>
-        <a href="/UTFARM/index.html"><img src="img/Logo.png" class='logo' alt="UTFARM"></a>
-        <ul class="desktop rightHeader">
-          <li>Serviços </li>
-          <li>Sobre nós</li>
-          <li><a href="/UTFARM/contato.html">Contato</a></li>
-        </ul>
-        <div class="mobile">
-          <img src="img/Logo.png" class='logo' alt="">
-        </div>
 
-    </header>
+	<header>
+		<div class="desktop">
+		  <ul class="leftHeader">
+			<li class="dropDown">Sítio Urbano 5.0 <br> 
+			   <span> Produção sem perdas e funcionários</span>
+			</li>
+			<li class="dropDown">Plataformas de produção <br> 
+			  <span> Soluções para produção em ambientes cobertos</span>
+			</li>
+			<li class="dropDown">Kits de inteligência <br> 
+			  <span>Soluções em automação</span>
+			</li>
+		  </ul>
+		  <img src="img/Logo.png" class='logo' alt="UTFARM">
+		  <ul class="rightHeader">
+			<li>Serviços </li>
+			<li>Sobre nós</li>
+			<li><a href="/contato.html">Contato</a></li>
+		  </ul>
+		</div>
+		  <div class="mobile">
+			<img src="img/Logo.png" class='logo' alt="UTFARM">
+			<nav role="navigation">
+			  <div id="menuToggle">
+				
+				<input type="checkbox" />
+				
+				
+				<span></span>
+				<span></span>
+				<span></span>
+				
+				
+				<ul id="menu">
+				  <a href="#"><li>Home</li></a>
+				  <a href="#"><li>Sítio Urbano 5.0</li></a>
+				  <a href="#"><li>Plataformas de produção</li></a>
+				  <a href="#"><li>Serviços</li></a>
+				  <a href="#"><li>Sobre nós</li></a>
+				  <a href="#"><li>Contato</li></a>
+				</ul>
+			  </div>
+			</nav>
+		  </div>
+  
+	  </header>
 
 	<div class="container">
 		<div class="contact-box">
 			<div class="left"></div>
 			<div class="right">
 				<h2>Contato</h2>
-				<input type="text" class="field" placeholder="Seu nome">
-				<input type="text" class="field" placeholder="Seu Email">
-				<input type="text" class="field" placeholder="Telefone">
-				<textarea placeholder="Mensagem" class="field"></textarea>
-				<button class="btn">Enviar</button>
+				<form class="contact-form" action="https://formsubmit.co/contato@utfarm.com.br" method="POST">
+				<input type="text" class="field" placeholder="Seu nome" required>
+				<input type="text" class="field" placeholder="Seu Email"required>
+				<input type="text" class="field" placeholder="Telefone" required>
+				<input type="text" class="field" placeholder="Mensagem" id="message" name="message" required>
+				<button type="submit" class="btn" >Enviar</button>
+				<input type="hidden" name="_subject" value="Novo email!">
+			    </form>
 			</div>
 		</div>
 	</div>
+	<footer> 
+		Em Desenvolvimento By:  <a href="https://www.linkedin.com/in/jair-josé-sequeira-807117197/" target="_blank"> Jair José Sequeira</a>
+	</footer>
 </body>
 </html>

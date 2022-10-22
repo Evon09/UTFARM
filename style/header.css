@@ -1,3 +1,14 @@
+:root{
+	--light-pink: #e83c8a;
+	--dark-pink: #a64f75;
+	--btn-pink:rgb(214,105,154);
+	--white: rgb(255, 255, 255);
+	--black: rgb(0, 0, 0);
+}
+
+
+
+
 .desktop{
     display:none;
 }
@@ -6,33 +17,41 @@
     display:block;
 }
 
+
 @media only screen and (min-width: 800px){
     .desktop{
         display:flex;
     }
     .mobile{
-        display:none;
+        display: none !important;
     }
+  
 }
 
-header{
-    width: 100%;
-    height: 10vh;
-    background-color:white;
-    color: var(--light-pink);
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1vw  ;
+header .desktop{
+  max-width: 100vw;
+  height: 10vh;
+  background-color:var(--white);
+  color: var(--light-pink);
+  flex-direction: row;
+  align-items: center;
+  
+  justify-content: space-between;
+  padding: 0 5vw;
 }
 
-header ul{
+.leftHeader, .rightHeader{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
 
-    width:45% ;
-    list-style: none;
-    justify-content: space-evenly;
+header .desktop  ul{
+  width:45%;
+  list-style: none;
+  justify-content: space-evenly;
     
 }
 
@@ -44,17 +63,16 @@ header .logo{
 }
 
 
-header ul li{
-    padding: 5px;
+header .desktop ul li{
     cursor: pointer;
 }
 
-header ul li.dropDown{
+header .desktop ul li.dropDown{
     /* overflow: hidden; */
     position: relative;
     transition: ease-in 0.5s;
 }
-header ul li.dropDown span{
+header .desktop ul li.dropDown span{
     display: none;
     overflow: hidden;
     background-color: var(--light-pink);
@@ -66,7 +84,7 @@ header ul li.dropDown span{
     padding: 5px;
 }
 
-header ul li.dropDown:hover span{
+header .desktop ul li.dropDown:hover span{
     display: inline-block;
     position: absolute;
     max-height: 100vh;
@@ -82,7 +100,178 @@ header ul li.dropDown:hover span{
     }
 }
     
-header a{
+header .desktop a{
     text-decoration: none;
     color: var(--light-pink);
 }
+
+
+
+
+.mobile .logo{
+    width: 10vw;
+    filter: drop-shadow( 0px 0px 9px 9px var(--black));
+}
+
+
+header .mobile{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 15vw;
+  padding: 10px;
+ 
+}
+
+
+#menuToggle
+{
+  
+  position: relative;
+  top: 0px;
+  right: 0px;
+  
+  z-index: 2;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: var(--light-pink);
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: var(--dark-pink);
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: 0px;
+  left:0px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: var(--light-pink);
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: var(--dark-pink);
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position:absolute;
+
+  z-index: 0;
+  width: 300px;
+  right: -10px;
+  top: -45px;
+  padding: 50px;
+  
+
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(0, -100%);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+  display: block;
+}
+
+
+
