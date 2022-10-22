@@ -6,11 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="/style/swiper-bundle.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/style/cardStyle.css">
+    
+
+
+
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
-    <link rel="stylesheet" href="style/main.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/header.css">
+    <link rel="stylesheet" href="/style/home.css">
+    <link rel="stylesheet" href="/style/footer.css">
+    <title>UTFARM - Plataformas inteligêntes</title>
 </head>
 <body>
     <header>
@@ -29,7 +43,7 @@
         <ul class="desktop rightHeader">
           <li>Serviços </li>
           <li>Sobre nós</li>
-          <li><a href="#contato">Contato</a></li>
+          <li><a href="/contato.html">Contato</a></li>
         </ul>
         <div class="mobile">
           <img src="img/Logo.png" class='logo' alt="">
@@ -39,6 +53,7 @@
 
 
     <section class="home">
+
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="true">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -99,13 +114,68 @@
 
     <section id="contato">
       <div class="container">
-        <h1>Lorem ipsum dolor sit amet consectetur</h1>
-        <a href="#"><button>Começar</button></a>
+        <h1>Possibilitando você cultivar quando, como e onde quiser</h1>
+        <a href="#"><button>Contato</button></a>
       </div>  
     </section>
 
     <section id="gif">
 
+    </section>
+
+    <section id="kitCards">
+      <div class="container">
+          <div class="slide-container swiper">
+            <div class="slide-content">
+                <div class="card-wrapper swiper-wrapper">
+                    
+                    <div class="card swiper-slide">
+                        <div class="card-content">
+                            <h2 class="name">Kit</h2>
+                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                        
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="card-content">
+                            <h2 class="name">kit</h2>
+                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                          
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="card-content">
+                            <h2 class="name">Kit</h2>
+                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                            
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="card-content">
+                            <h2 class="name">Kit</h2>
+                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                        </div>
+                    </div>
+  
+                </div>
+            </div>
+
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="contato">
+      <div class="container">
+        <h1>Fornecemos serviços para ajudá-lo a ter sucesso, tenha um especialista o dia todo a seu dispor.</h1>
+      </div>  
     </section>
 
 
@@ -205,14 +275,27 @@
 
       </div>
     </section> -->
-
+    <section id="patrocinio">
+      
+        
+  
+    </section>
     
 
+    
     <footer> 
+      
       Em Desenvolvimento By:  <a href="https://www.linkedin.com/in/jair-josé-sequeira-807117197/" target="_blank"> Jair José Sequeira</a>
     </footer>
 
     <!-- JavaScript Bundle with Popper -->
+    <!-- Swiper JS -->
+    <script src="/script/swiper-bundle.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="/script/cards.js"></script>
+    <script src="https://kit.fontawesome.com/829ad73b08.js" crossorigin="anonymous"></script>
+    <script src="/script/cards.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>

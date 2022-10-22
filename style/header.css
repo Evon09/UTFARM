@@ -1,0 +1,88 @@
+.desktop{
+    display:none;
+}
+
+.mobile{
+    display:block;
+}
+
+@media only screen and (min-width: 800px){
+    .desktop{
+        display:flex;
+    }
+    .mobile{
+        display:none;
+    }
+}
+
+header{
+    width: 100%;
+    height: 10vh;
+    background-color:white;
+    color: var(--light-pink);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vw  ;
+}
+
+header ul{
+
+    width:45% ;
+    list-style: none;
+    justify-content: space-evenly;
+    
+}
+
+
+header .logo{
+    display: block;
+    width: 4vw;
+    filter: drop-shadow( 0px 0px 9px 9px var(--black));
+}
+
+
+header ul li{
+    padding: 5px;
+    cursor: pointer;
+}
+
+header ul li.dropDown{
+    /* overflow: hidden; */
+    position: relative;
+    transition: ease-in 0.5s;
+}
+header ul li.dropDown span{
+    display: none;
+    overflow: hidden;
+    background-color: var(--light-pink);
+    text-align: center;
+    max-height: 0;
+    transition: ease-in 0.5s;
+    z-index: 2;
+    color: var(--white);
+    padding: 5px;
+}
+
+header ul li.dropDown:hover span{
+    display: inline-block;
+    position: absolute;
+    max-height: 100vh;
+    animation: slideDown 0.1s ease-in-out;
+}
+
+@keyframes slideDown{
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100%;
+    }
+}
+    
+header a{
+    text-decoration: none;
+    color: var(--light-pink);
+}

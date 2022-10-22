@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+
+:root{
+
+    --light-pink:#e83c8a;
+    --dark-pink:#a64f75;
+    --white:rgb(255, 255, 255);
+    --black:rgb(0, 0, 0); 
+
+}
+
+
+section:not(.home){
+    min-height: 50vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p{
+    text-indent: 1.5em;
+}
+
+/* Carrosel Home */
+section.home{
+    height: calc(70vh - 88px);
+}
+
+.home .carousel-inner .carousel-item {
+    height: calc(70vh - 88px);
+}
+  
+.home .carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 50vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+.container{
+    display: flex;
+    width: 60%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/*Section 1 contato*/
+
+#contato{
+    background-color:var(--white);
+    color: var(--light-pink);
+    padding: vw;
+}
+
+#contato h1{
+    font-size: calc(2em + 1vmin);
+}
+
+#contato button{
+    background-color: var(--dark-pink);
+    color: var(--white);
+    border: 1px solid var(--dark-pink);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: ease-in 0.2s;
+}
+
+#contato button:hover{
+    background-color: var(--white);
+    color: var(--dark-pink);
+    border: 1px solid var(--dark-pink);
+}
+
+/* Section 3 gif*/
+#gif{
+
+    background-image: url('../img/VideoGiFUTFARM.gif');
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    
+}
+
+
+/* Section 4 kitCards */
+
+#kitCards{
+    
+    color: var(--white);
+}
+
+/*sectiom patrocinio*/
+#patrocinio{
+    background-image: url("/img/patrocinio.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    background-position: center center;
+    min-height: 20vh;
+
+}
+
+
+
+/*
+
+.container{
+    width: 60%;
+}
+
+section#about .container p{
+    font-size: calc(0.75em + 1vmin);
+    text-align: justify;
+}
+
+
+*/
+
+/* section 3 visao e missao */
+/*
+#vew{
+    background-color: var(--green);
+    color: var(--white);
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+section#vew .container .text{
+    z-index: 1;
+    position: relative;
+    font-size: calc(0.75em + 1vmin);;
+}
+
+section#vew .container .text p{
+    background-color: var(--light-green);
+    text-align: justify;
+    padding: 0.5rem;
+    
+}
+
+#vew img{
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    
+}
+
+@media only screen and (max-width: 1080px){
+    #vew img{
+        display: none;
+    }
+
+    #vew{
+        background-image: url(../img/leaf.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+*/
+
+
+
+/* section 5 kits*/
+/*
+section#kits{
+    
+    position: relative;
+    background-color: var(--green);
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 1rem;
+}
+
+
+
+
+.card{
+    
+    position: relative;
+    width: 30%;
+    overflow: hidden;
+    min-height: 55vh;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+
+    box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.2);
+
+    transition: ease 1s;
+
+}
+
+@media only screen and (max-width: 1000px){
+    .cards{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .card{
+        width: 80%;
+        min-height: 40vh;
+    }
+}
+
+
+.card .cardInfo{
+    text-align: justify;
+    font-size: calc(0.57em + 1vmin);
+ 
+    transition: ease-in-out 0.3s;
+}
+
+.card span{
+    overflow: hidden;
+    padding: 1rem;
+    position: absolute;
+    color: var(--white);
+    background-color: var(--white);
+    
+    max-height: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 0 0 1rem 1rem;
+    transition: ease-in-out 1s;
+
+    z-index: 1;
+}
+
+.card:hover span{
+
+    max-height: 100%;
+    color: var(--black);
+    box-shadow: 0px 20px 1rem 0.5rem rgb(0 0 0 / 20%);
+    transition: ease-in-out 1s;
+
+}
+
+.card:hover{
+    overflow:visible;   
+}
+
+
+
+.imgCard img{ 
+    object-fit: cover;
+    object-position: center;
+}
+
+ */
+
+/*Footer*/

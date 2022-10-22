@@ -1,0 +1,19 @@
+/* footer */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    background-color: var(--dark-pink);
+    color: white;
+
+}
+
+footer a{
+    text-decoration: dashed; 
+    color: var(--white);
+    cursor: pointer;
+}
