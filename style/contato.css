@@ -120,3 +120,18 @@ textarea{
 		height: 200px;
 	}
 }
+
+
+@media screen and (max-height: 800px) {
+
+	.left{
+		display: none;
+	}
+
+
+}
+
+footer{
+	position: absolute;
+	bottom: 0;
+}

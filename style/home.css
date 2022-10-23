@@ -138,7 +138,7 @@ section#about .container p{
 section#vew .container .text{
     z-index: 1;
     position: relative;
-    font-size: calc(0.75em + 1vmin);;
+    font-size: calc(0.75em + 1vmin);
 }
 
 section#vew .container .text p{

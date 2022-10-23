@@ -35,6 +35,7 @@
   background-color: #FFF;
   height: 40vh;
   padding: 20px;
+  font-size: calc(0.60em + 1vmin);
 }
 
 
@@ -71,5 +72,29 @@
   }
   #kitCards .swiper-navBtn{
     display: none;
+  }
+}
+
+@media screen and (max-height: 800px) {
+  #kitCards .description{
+    font-size: 0.7rem;
+    color: #e83c8a;
+  }
+  #kitCards .name{
+    font-size: 1.2rem;
+  }
+
+  #kitCards .button{
+    font-size: 0.8rem;
+  }
+  #kitCards .card-content{
+    padding: 0 1px;
+  }
+  #kitCards .card{
+    height: 45vh;
+  }
+
+  #kitCards .slide-content{
+    height: 45vh;
   }
 }
