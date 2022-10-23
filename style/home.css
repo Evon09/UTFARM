@@ -100,7 +100,7 @@ section.home{
 
 /*sectiom patrocinio*/
 #patrocinio{
-    background-image: url("/img/patrocinio.jpeg");
+    background-image: url("../img/patrocinio.jpeg");
     background-repeat: no-repeat;
     background-size: 100vw;
     background-position: center center;
