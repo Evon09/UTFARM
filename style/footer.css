@@ -2,18 +2,55 @@
 
 footer{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content:  space-around;
     align-items: center;
-    height: 10vh;
+    min-height: 20vh;
     width: 100%;
-    background-color: var(--dark-pink);
-    color: white;
+    background-color: #c4aebc;
+    /*background: rgb(236,95,164);
+    background: linear-gradient(67deg, rgba(236,95,164,1) 4%, rgba(230,146,186,1) 12%, rgba(204,116,155,1) 49%, rgba(211,124,163,1) 60%, rgba(244,191,209,1) 100%);*/
+    color: black;
 
+}
+
+footer .utfarmLogo img{
+    display: block;
+    width: 10vh;
+    
+}
+
+footer .contatos ul{
+    list-style: none;
+}
+
+footer .contatos h1{
+    font-size: calc(0.75em + 1vmin);
+    padding-left: 32px;
+}
+
+.btn-local{
+    background-color: rgba(0, 0, 0, 0);
+    text-decoration:underline;
+}
+
+.modal-title{
+    color: black;
+}
+.modal-body iframe{
+    width: 100%;
 }
 
 footer a{
     text-decoration: dashed; 
     color: var(--white);
     cursor: pointer;
+}
+
+@media only screen and (max-width: 550px){
+
+    footer{
+        flex-direction: column;
+    }
+
 }

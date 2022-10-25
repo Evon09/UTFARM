@@ -79,7 +79,7 @@ header .desktop ul li.dropDown span{
     text-align: center;
     max-height: 0;
     transition: ease-in 0.5s;
-    z-index: 2;
+    z-index: 120;
     color: var(--white);
     padding: 5px;
 }
@@ -132,7 +132,7 @@ header .mobile{
   top: 0px;
   right: 0px;
   
-  z-index: 2;
+  z-index: 120;
 
   -webkit-user-select: none;
   user-select: none;

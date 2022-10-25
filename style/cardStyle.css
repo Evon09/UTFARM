@@ -7,43 +7,54 @@
 
 }
 
-
-
-#kitCards .slide-container{
+#cardSlide .slide-container{
   width: 100%;
+}
+
+#cardSlide{
+  min-height: auto;
+  width: 100%;
+  padding-bottom: 20px;
 
 }
 
-#kitCards .name{
+#cardSlide .name{
   color: var(--black);
 }
 
 
-#kitCards .slide-content{
+#cardSlide .slide-content{
 
   border-radius: 5px;
-  height: 40vh;
-  margin: 10px;
+  height: 100%;
+  width: 100%;
+ 
   
 }
 
-#kitCards .card{
+#cardSlide .card{
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
   background-color: #FFF;
-  height: 40vh;
+  height: auto;
   padding: 20px;
-  font-size: calc(0.60em + 1vmin);
+
+ 
 }
 
 
-
-
-#kitCards .description{
-  font-size: 14px;
+#cardSlide .description{
+  font-size: calc(0.6em + 1vmin);
   color: #707070;
+}
+
+.card-content p{
+  text-align: justify;
+  font-size: 2rem;
+}
+.card-content{
   text-align: center;
 }
 
@@ -52,9 +63,9 @@
   color: var(--light-pink);
 }
 
-#kitCards .button{
+#cardSlide .button{
   border: none;
-  font-size: 16px;
+  font-size: 15px;
   color: #FFF;
   padding: 8px 16px;
   background-color: var(--light-pink);
@@ -67,34 +78,31 @@
 
 
 @media screen and (max-width: 768px) {
-  #kitCards .slide-content{
+  #cardSlide .slide-content{
     margin: 0 10px;
   }
-  #kitCards .swiper-navBtn{
+  #cardSlide .swiper-navBtn{
     display: none;
   }
 }
 
 @media screen and (max-height: 800px) {
-  #kitCards .description{
-    font-size: 0.7rem;
+  #cardSlide .description{
+    font-size: 1rem;
     color: #e83c8a;
   }
-  #kitCards .name{
+  #cardSlide .name{
     font-size: 1.2rem;
   }
 
-  #kitCards .button{
+  #cardSlide .button{
     font-size: 0.8rem;
   }
-  #kitCards .card-content{
+  #cardSlide .card-content{
     padding: 0 1px;
   }
-  #kitCards .card{
-    height: 45vh;
-  }
 
-  #kitCards .slide-content{
-    height: 45vh;
+  #cardSlide .slide-content{
+    height: 60vh;
   }
 }

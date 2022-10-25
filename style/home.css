@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+
 
 :root{
 
@@ -26,11 +26,29 @@ p{
 /* Carrosel Home */
 section.home{
     height: calc(70vh - 88px);
+    position: relative;
+}
+
+section.home h1{
+    position: absolute;
+    text-transform: uppercase;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: var(--white);
+    font-size: calc(3em + 1vmin);
+    z-index: 100;
+    text-align: center;
+    
+    filter:drop-shadow(0 0 0.75rem var(--black));
+
 }
 
 .home .carousel-inner .carousel-item {
     height: calc(70vh - 88px);
 }
+
+
   
 .home .carousel-item img {
     position: absolute;
@@ -56,8 +74,9 @@ section.home{
 
 #contato{
     background-color:var(--white);
-    color: var(--light-pink);
-    padding: vw;
+    color: var(--black);
+    min-height: 45vh;
+    /*padding: vw;                    OLHA ISSO*/
 }
 
 #contato h1{
@@ -83,7 +102,7 @@ section.home{
 /* Section 3 gif*/
 #gif{
     
-    background-image: url('../img/VideoGiFUTFARM.gif');
+    background-image: url('../img/FuturoGIF.gif');
     background-size: cover;
     background-repeat: repeat;
     background-position: center;

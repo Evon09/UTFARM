@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Contato </title>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
-
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 	<link rel="stylesheet" href="./style/contato.css">
 	<link rel="stylesheet" href="./style/header.css">
 	<link rel="stylesheet" href="./style/footer.css">
-
+	
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	
+	<link rel="icon" type="image/x-icon" href="./img/Logo.png">
+    <title>UTFARM - Plataformas inteligêntes</title>
 </head>
 <body>
 
 	<header>
 		<div class="desktop">
 		  <ul class="leftHeader">
-			<li class="dropDown">Sítio Urbano 5.0 <br> 
+			<a href="/UTFARM/sitioUrbano.html"><li class="dropDown">Sítio Urbano 5.0 <br> 
 			   <span> Produção sem perdas e funcionários</span>
-			</li>
-			<li class="dropDown">Plataformas de produção <br> 
+			</li></a>
+			<a href="/UTFARM/plataformas.html"><li class="dropDown">Plataformas de produção <br> 
 			  <span> Soluções para produção em ambientes cobertos</span>
-			</li>
-			<li class="dropDown">Kits de inteligência <br> 
+			</li></a>
+			<a href="/UTFARM/kits.html"><li class="dropDown">Kits de inteligência <br> 
 			  <span>Soluções em automação</span>
-			</li>
+			</li></a>
 		  </ul>
 		  <a href="/UTFARM/index.html"><img src="img/Logo.png" class='logo' alt="UTFARM"></a>
 		  <ul class="rightHeader">
-			<li>Serviços </li>
-			<li>Sobre nós</li>
+			<a href="#"><li>Serviços </li></a>
+			<a href="/UTFARM/sobre.html"><li>Sobre nós</li></a>
 			<li><a href="/UTFARM/contato.html">Contato</a></li>
 		  </ul>
 		</div>
@@ -50,24 +52,24 @@
 				
 				<ul id="menu">
 				  <a href="/UTFARM/index.html"><li>Home</li></a>
-				  <a href="#"><li>Sítio Urbano 5.0</li></a>
-				  <a href="#"><li>Plataformas de produção</li></a>
-				  <a href="#"><li>Serviços</li></a>
-				  <a href="#"><li>Sobre nós</li></a>
+				  <a href="/UTFARM/sitioUrbano.html"><li>Sítio Urbano 5.0</li></a>
+				  <a href="/UTFARM/plataformas.html"><li>Plataformas de produção</li></a>
+				  <a href="/UTFARM/kits.html"><li>Serviços</li></a>
+				  <a href="/UTFARM/sobre.html"><li>Sobre nós</li></a>
 				  <a href="/UTFARM/contato.html"><li>Contato</li></a>
 				</ul>
 			  </div>
 			</nav>
 		  </div>
   
-	  </header>
+	</header>
 
 	<div class="container">
 		<div class="contact-box">
 			<div class="left"></div>
 			<div class="right">
 				<h2>Contato</h2>
-				<form class="contact-form" action="https://formsubmit.co/contato@utfarm.com.br" method="POST">
+				<form class="contact-form" action="https://formsubmit.co/#" method="POST">
 				<input type="text" class="field" placeholder="Seu nome" required>
 				<input type="text" class="field" placeholder="Seu Email"required>
 				<input type="text" class="field" placeholder="Telefone" required>
@@ -79,7 +81,43 @@
 		</div>
 	</div>
 	<footer> 
-		Em Desenvolvimento By:  <a href="https://www.linkedin.com/in/jair-josé-sequeira-807117197/" target="_blank"> Jair José Sequeira</a>
-	</footer>
+		<div class="utfarmLogo">
+			<img src="./img/Logo.png" alt="">
+		</div>
+  
+		<div class="contatos">
+			<h1>Contatos:</h1>
+			<ul>
+				<li>contato@utfarm.com.br</li>
+				<li>vendas@utfarm.com.br</li>
+				<li>suporte@utfarm.com.br</li> 
+			</ul>
+		</div>
+  
+	<button type="button" class="btn-local" data-bs-toggle="modal" data-bs-target="#exampleModal">
+		PRL RUA MANAUS, SN° <br> CHACARA <br> SANTA HELENA, 85892-000
+	</button>
+	
+  
+  
+  
+  
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+			<h1 class="modal-title fs-5" id="exampleModalLabel">Local</h1>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14479.829753202455!2d-54.3471117!3d-24.8653032!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4e1f5af34ccff9cc!2sHidroponia%20Montresol!5e0!3m2!1spt-BR!2sbr!4v1666630267368!5m2!1spt-BR!2sbr" width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+		</div>
+		</div>
+	</div>
+	  </footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>
